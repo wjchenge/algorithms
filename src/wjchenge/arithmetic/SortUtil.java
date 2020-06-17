@@ -1,5 +1,9 @@
 package wjchenge.arithmetic;
 
+/**
+ * 排序工具类
+ * @author wjchenge
+ */
 public class SortUtil {
 
     /**
@@ -47,10 +51,29 @@ public class SortUtil {
         return true;
     }
 
+    /**
+     * 生成随机数组
+     * @param size 数组大小
+     * @param max 随机因子大小
+     * @return
+     */
     public static int[] getRandomArray(int size, int max) {
         int[] a = new int[size];
         for (int i = 0; i < size; i++) {
             a[i] = (int) (Math.random() * max);
+        }
+        return a;
+    }
+
+    /**
+     * 生成顺序数组
+     * @param size 数组大小
+     * @return
+     */
+    public static int[] getOrderArray(int size) {
+        int[] a = new int[size];
+        for (int i = 0; i < size; i++) {
+            a[i] = i;
         }
         return a;
     }

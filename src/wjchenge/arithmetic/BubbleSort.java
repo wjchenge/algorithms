@@ -2,6 +2,10 @@ package wjchenge.arithmetic;
 
 import java.util.Arrays;
 
+/**
+ * 冒泡排序
+ * @author wjchenge
+ */
 public class BubbleSort {
 
     public static void main(String[] args) {
@@ -19,9 +23,7 @@ public class BubbleSort {
             flag = true;
             for (int j = 0; j < length - i - 1; ++j) {
                 if (a[j] > a[j + 1]) {
-                    a[j] = a[j] ^ a[j + 1];
-                    a[j + 1] = a[j] ^ a[j + 1];
-                    a[j] = a[j] ^ a[j + 1];
+                    SortUtil.swap(a, j, j + 1);
                     flag = false;
                 }
             }

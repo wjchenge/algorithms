@@ -2,6 +2,10 @@ package wjchenge.arithmetic;
 
 import java.util.Arrays;
 
+/**
+ * 选择排序
+ * @author wjchenge
+ */
 public class SelectionSort {
     public static void main(String[] args) {
         int[] a = new int[]{4,8,2,1,6,3,5};
@@ -22,9 +26,7 @@ public class SelectionSort {
                 }
             }
             if (minIndex > i) {
-                a[i] = a[i] ^ a[minIndex];
-                a[minIndex] = a[i] ^ a[minIndex];
-                a[i] = a[i] ^ a[minIndex];
+                SortUtil.swap(a, i, minIndex);
             }
         }
     }
